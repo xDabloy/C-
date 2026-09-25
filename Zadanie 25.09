@@ -1,1 +1,109 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //List<string> imiona = new List<string>();
+            //imiona.Add("Ola");
+            //imiona.Add("Kamil");
+            //imiona.Add("Kamil");
+            //imiona.Add("Kamil");
+            //imiona.Add("Paweł");
+            //// [Ola][Kamil][Paweł]
+            ////   0     1      2 
+            //foreach (var item in imiona) Console.WriteLine($"Element {item}");
+
+            //Console.WriteLine(imiona[1]);
+            //imiona.Remove("Anna");
+            ////   0            1
+            //foreach (var item in imiona) Console.WriteLine($"Element {item}");
+
+            // Program do tworzenia zadania (ToDo)
+
+            //Console.WriteLine($"Program do tworzenia zadania");
+            //List<string> tasks = new List<string>();
+            //bool running = true;
+            //while (running)
+            //{
+            //    Console.WriteLine("\n1. Dodaj | 2. Pokaż | 3. Usuń | 4. Zakończ");
+            //    string menu = Console.ReadLine();
+            //    switch (menu)
+            //    {
+            //        case "1":
+            //            Console.Write("\n1 Podaj zadanie: ");
+            //            tasks.Add(Console.ReadLine());
+            //            break;
+            //        case "2":
+            //            for (int i = 0; i < tasks.Count; i++)
+            //                    Console.WriteLine($"{i + 1}. {tasks[i]}");
+            //            break;
+            //        case "3":
+            //            Console.Write("Podaj numer do usunięcia: ");
+            //            int index = int.Parse(Console.ReadLine()) - 1;
+            //            if (index >= 0 && index < tasks.Count);
+            //            tasks.RemoveAt(index);
+            //            break;
+            //        case "4":
+            //            break;
+            //            running = false;
+            //            break;
+
+
+            // Ekwipunek
+            //List<string> bag = new List<string>();
+            //int capacity = 5;
+            //while (true)
+            //{
+            //    Console.WriteLine($"\nMiejsce w plecaku: {bag.Count} / {capacity} ");
+            //    Console.WriteLine("Polecenia: EXIT, SORT");
+            //    Console.Write("Akcja: ");
+            //    string command = Console.ReadLine().ToUpper();
+            //    if (command == "EXIT") break;
+            //    if (command == "SORT")
+            //    {
+            //        bag.Sort();
+            //        Console.WriteLine("Ekwipunek został posortowany!");
+            //        continue;
+            //    }
+            //    if (bag.Contains(command))
+            //    {
+            //        Console.WriteLine("Już masz ten przedmiot!");
+            //    }
+            //    else if (bag.Count < capacity)
+            //    {
+            //        bag.Add(command);
+            //        Console.WriteLine($"Podniesiono: {command}");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Twoja torba jest już pełna!");
+            //    }
+            //}
+            //Console.WriteLine("Zawartość plecaka: ");
+            //foreach (string item in bag) Console.WriteLine($"- {item}");
+
+
+
+
+
+
+            // Losowanie ucznia do odpowiedzi
+
+            List<string> students = new List<string>() { "Adam", "Ewa", "Kamil", "Kuba", "Oliwer" };
+            Random random = new Random();
+
+            Console.WriteLine("Rozpoczynamy odpytywanie!");
+            while (students.Count > 0)
+            {
+                int randomIndex = random.Next(students.Count);
+                students[randomIndex].ToString();
+                Console.WriteLine($"Do odpowiedzi: {students[randomIndex]}");
+                students.RemoveAt(randomIndex);
+            }
+        }
+    }
+
+}
+    
 
